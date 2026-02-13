@@ -4,13 +4,16 @@ import {
   User,
   Briefcase,
   Mail,
-  Code2
+  Code2,
+  Menu,
+  X
 } from "lucide-react";
 import { useState } from "react";
 import ThemeToggle from "./ThemeToggle";
 
 const Navbar = () => {
   const [hovered, setHovered] = useState(null);
+  const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [
     { name: "Home", icon: <Home size={18} /> },
@@ -26,9 +29,8 @@ const Navbar = () => {
       transition={{ duration: 0.6 }}
       className="fixed w-full top-0 z-50 backdrop-blur-lg bg-slate-900/70 shadow-lg"
     >
-      <div className="flex justify-between items-center h-16 px-8 text-white max-w-7xl mx-auto">
+      <div className="flex justify-between items-center h-16 px-6 md:px-8 text-white max-w-7xl mx-auto">
 
-        
         {/* Logo */}
         <motion.div
           whileHover={{ scale: 1.05 }}
@@ -45,8 +47,8 @@ const Navbar = () => {
           </h1>
         </motion.div>
 
-        {/* Nav Links */}
-        <ul className="flex gap-8 text-lg font-medium items-center">
+        {/* Desktop Nav */}
+        <ul className="hidden md:flex gap-8 text-lg font-medium items-center">
           {navLinks.map((link, index) => (
             <li
               key={index}
@@ -56,11 +58,8 @@ const Navbar = () => {
             >
               <a
                 href={`#${link.name.toLowerCase()}`}
-                className="flex items-center gap-2 
-                           hover:text-sky-400 
-                           transition duration-300"
+                className="flex items-center gap-2 hover:text-sky-400 transition duration-300"
               >
-                {/* Icon Animation */}
                 <motion.span
                   whileHover={{ rotate: 10, scale: 1.1 }}
                   transition={{ type: "spring", stiffness: 300 }}
@@ -71,7 +70,6 @@ const Navbar = () => {
                 {link.name}
               </a>
 
-              {/* Animated Underline */}
               {hovered === index && (
                 <motion.div
                   layoutId="underline"
@@ -80,10 +78,43 @@ const Navbar = () => {
               )}
             </li>
           ))}
+          <ThemeToggle />
         </ul>
 
-        <ThemeToggle />
+        {/* Mobile Right Section */}
+        <div className="md:hidden flex items-center gap-4">
+          <ThemeToggle />
+
+          <button onClick={() => setIsOpen(!isOpen)}>
+            {isOpen ? <X size={26} /> : <Menu size={26} />}
+          </button>
+        </div>
       </div>
+
+      {/* Mobile Menu */}
+      {isOpen && (
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.3 }}
+          className="md:hidden bg-slate-900/95 backdrop-blur-lg px-6 pb-6"
+        >
+          <ul className="flex flex-col gap-6 text-lg font-medium">
+            {navLinks.map((link, index) => (
+              <li key={index}>
+                <a
+                  href={`#${link.name.toLowerCase()}`}
+                  onClick={() => setIsOpen(false)}
+                  className="flex items-center gap-3 hover:text-sky-400 transition"
+                >
+                  {link.icon}
+                  {link.name}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </motion.div>
+      )}
     </motion.nav>
   );
 };

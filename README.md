@@ -1,16 +1,42 @@
-# React + Vite
+# 💼 Bhupender Singh - Developer Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to my personal developer portfolio website!  
+This project showcases my skills, projects, and experience as a Full Stack (MERN) Developer.
 
-Currently, two official plugins are available:
+🌐 Live Demo: https://bhupenderportfolioo.netlify.app/  
+📧 Email: bhupendersingh92054@gmail.com  
+🔗 LinkedIn: https://www.linkedin.com/in/bhupender-singh-1390b73aa/  
+💻 GitHub: https://github.com/bhupendersingh92054-maker  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🚀 About The Project
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+This is my personal portfolio website built using modern web technologies.  
+It highlights:
 
-## Expanding the ESLint configuration
+- 👨‍💻 About Me section
+- 🛠 Skills section
+- 📂 Projects showcase
+- 📞 Contact form
+- 🎨 Modern UI with animations
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🛠 Tech Stack
+
+- ⚛️ React.js
+- 🎨 Tailwind CSS
+- 🎬 Framer Motion
+- 🌐 Vite
+- 📦 Node.js (if backend used)
+
+---
+
+## 📸 Features
+
+- ✨ Smooth animations
+- 📱 Fully Responsive Design
+- 🎯 Clean and Modern UI
+- 📩 Contact Section
+
