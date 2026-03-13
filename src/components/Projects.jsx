@@ -3,8 +3,19 @@ import { useState } from "react";
 import project1 from "../assets/youtube.jpg";
 import project2 from "../assets/login.jpg";
 import project3 from "../assets/weather.jpg";
+import neetvision from "../assets/neetvision.jpg";
+
 
 const projects = [
+   {
+    title: "NEET VISION",
+    description:
+      "MERN-based NEET preparation platform with mock tests, real-time results, and interactive learning tools.",
+    tech: "React.js, Node.js, Express.js, MongoDB, JWT Authentication, REST APIs",
+    image: neetvision,
+    github: "https://github.com/bhupendersingh92054-maker/NEET-VISUAL-LEARNING.git",
+    live: "https://neet-visual-learning-vgar.vercel.app/",
+  },
   {
     title: "YouTube Clone",
     description:
@@ -13,15 +24,6 @@ const projects = [
     image: project1,
     github: "https://github.com/bhupendersingh92054-maker/MyTube.git",
     live: "https://luminous-paletas-aef1a9.netlify.app/",
-  },
-  {
-    title: "Login & Register System",
-    description:
-      "Authentication system with Node.js backend and MongoDB.",
-    tech: "React, Node.js, MongoDB",
-    image: project2,
-    github: "https://github.com/bhupendersingh92054-maker/Login-Page.git",
-    live: "https://tubular-donut-c1f8b5.netlify.app/",
   },
   {
     title: "Weather App",
